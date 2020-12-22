@@ -57,7 +57,7 @@ const Portfolio = function() {
 	function typeAnimation() {
 		Typed.new("#writing-text", {
 			strings: [
-				"am a Full-Stack Java Web Developer.", "love everything about code.", "love to solve problems.", "also love to learn and work with new technologies."
+				"am a Full-Stack Java Web Developer.", "currently working as Programmer.", "love everything about code.", "love to solve problems.", "also love to learn and work with new technologies."
 			],
 			// Optionally use an HTML element to grab strings from (must wrap each string in a <p>)
 			stringsElement: null,
@@ -71,6 +71,20 @@ const Portfolio = function() {
 			onStringTyped: function() {}
 		});
 	}
+	
+	function ratestar() {
+		var a;
+		a = document.getElementById("div1");
+		a.innerHTML = "&#xf006;";
+		setTimeout(function () {
+		a.innerHTML = "&#xf123;";
+		}, 1000);
+	setTimeout(function () {
+		a.innerHTML = "&#xf005;";
+		}, 2000);
+}
+ratestar();
+setInterval(ratestar, 3000);
 
 	return {
 		displayWordCloud: displayWordCloud,
